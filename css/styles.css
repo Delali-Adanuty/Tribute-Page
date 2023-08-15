@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'dm sans', 'calibri';
+}
+
+:root{
+    --theme-color:rgb(59, 113, 175);
+}
+
+main{
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+}
+
+main h1{
+    text-align: center;
+    margin:1rem;
+}
+
+main section.tribute{
+    display: flex;
+    border-radius:10px;
+    box-shadow: .13rem .13rem .7rem rgba(0, 0, 0, 0.37);
+    margin:1rem 0;
+}
+
+main section.tribute div#img-div{
+    width: 30rem;
+}
+
+main section.tribute section.img-section{
+    display: flex;
+    justify-content: center;
+}
+
+main section.tribute img{
+    height: 35rem;
+    max-width: 100%;
+    display: block;
+    object-fit: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+main section.tribute img#image{
+    height: auto;
+    min-height: 35rem;
+}
+
+main section.tribute div#img-caption{
+    color:var(--theme-color);
+    position: absolute;
+    font-size: 2.2rem;
+    font-weight: 600;
+    height: 4rem;
+    margin:0;
+    padding: 0 .8rem;
+    width: 29.1rem;
+    display: grid;
+    align-content: center;
+    margin-top:-4.05rem;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+main section.tribute section#tribute-info{
+    padding:2rem 1rem;
+    width: 30rem;
+}
+
+main section.tribute section#tribute-info h3{
+    text-align:center;
+    font-size: 1.8rem;
+    color:var(--theme-color);
+    font-weight: 900;
+}
+
+main section.tribute section#tribute-info p{
+    text-align: left;
+    margin:1rem 0;
+    font-size: 1.15rem;
+}
+
+@media screen and (max-width:1024px){
+    main{
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    main section.tribute{
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    main section.tribute div#img-div{
+        width: 90vw;
+    }
+
+    main section.tribute img{
+        width:90vw;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    main section.tribute section#tribute-info{
+        padding:2rem;
+        width: calc(90vw - 4rem);
+    }
+}
+
+@media screen and (max-width:480px){
+    main{
+        margin:0;
+        padding: 0;
+        width: 100vh;
+        display: grid;
+    }
+
+    main section.tribute,
+    main section.tribute img{
+        width: 90vh;
+    }
+
+    main section.tribute{
+        box-shadow: none;
+    }
+
+    main section.tribute img{
+        height: 45rem;
+    }
+
+    main section.tribute section#tribute-info{
+        width:calc(90vh - 4rem);
+        padding:4rem 2rem;
+    }
+}
